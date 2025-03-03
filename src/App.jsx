@@ -24,7 +24,7 @@ const App = () => {
       
 
         <div>
-          <main className="w-[70vw] h-screen px-3 bg-green-500  ">
+          <main className="w-[70vw] h-screen  bg-green-500  ">
             <Routes> 
               <Route path="/" element={<Navigate to="/first" />} />
               <Route path="/first" element={<First />} />
