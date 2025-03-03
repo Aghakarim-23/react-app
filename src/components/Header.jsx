@@ -1,13 +1,9 @@
-import { Link } from 'react-router-dom'
+import React from 'react'
 
 const Header = () => {
   return (
-    <div className='h-[4rem] flex  items-center bg-amber-400 '>
-        <nav className='w-full flex justify-between px-3'>
-            <Link to="/first">Başlıq</Link>
-            <Link to="/second">Məzmun</Link>
-            <Link to="/third">Sonuncu səhifə</Link>
-        </nav>
+    <div className='border-2 py-2 fixed top-0 left-0 z-50 w-full h-[4rem] bg-white'>
+        <h1 className='h-[3rem] flex justify-center items-center text-4xl '>Saytımıza xoş gəlmişsiniz</h1>
     </div>
   )
 }

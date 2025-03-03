@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+import Header from "./components/Header.jsx";
 import Footer from "./components/Footer";
 import First from "./pages/First";
 import Second from "./pages/Second";
@@ -13,30 +13,19 @@ import RecommendedReads from "./pages/asideLinks/RecommendedReads";
 import NewsletterSignup from "./pages/asideLinks/NewsletterSignup";
 import SocialMediaLinks from "./pages/asideLinks/SocialMediaLinks";
 import AboutUs from "./pages/asideLinks/AboutUs";
+import Nav from "./components/Nav.jsx"
 
 const App = () => {
   return (
     <BrowserRouter>
         <Header />
-      <div className="flex">
-        <aside>
-          <ul className="flex flex-col gap-6 font-semibold ">
-            <Link to="/latestNews" className="hover:bg-zinc-400 p-4 hover:cursor-pointer">Latest News</Link>
-            <Link to="/featuredStories" className="hover:bg-zinc-400 p-4 hover:cursor-pointer">Popular Articles</Link>
-            <Link to="/upcomingEvents" className="hover:bg-zinc-400 p-4 hover:cursor-pointer">Upcoming Events</Link>
-            <Link to="/recentComments" className="hover:bg-zinc-400 p-4 hover:cursor-pointer">Recent Comments</Link>
-            <Link to="/trendingTopics" className="hover:bg-zinc-400 p-4 hover:cursor-pointer">Trending Topics</Link>
-            <Link to="/recommendedReads" className="hover:bg-zinc-400 p-4 hover:cursor-pointer">Recommended Reads</Link>
-            <Link to="/featuredStories" className="hover:bg-zinc-400 p-4 hover:cursor-pointer">Featured Stories</Link>
-            <Link to="/newsletterSignup" className="hover:bg-zinc-400 p-4 hover:cursor-pointer">Newsletter Signup</Link>
-            <Link to="/socialMediaLinks" className="hover:bg-zinc-400 p-4 hover:cursor-pointer">Social Media Links</Link>
-            <Link to="/aboutUs" className="hover:bg-zinc-400 p-4 hover:cursor-pointer">About Us</Link>
-          </ul>
-        </aside>
+      <div className="flex pt-16">
+        <Nav/>
+      
 
         <div>
-          <main className="h-screen px-3 bg-green-500 w-[50vw]">
-            <Routes>
+          <main className="w-[70vw] h-screen px-3 bg-green-500  ">
+            <Routes> 
               <Route path="/" element={<Navigate to="/first" />} />
               <Route path="/first" element={<First />} />
               <Route path="/second" element={<Second />} />
@@ -56,6 +45,22 @@ const App = () => {
             </Routes>
           </main>
         </div>
+
+        <aside className="w-full">
+          <ul className="flex flex-col  font-semibold ">
+            <Link to="/latestNews" className="border-b-2 hover:bg-zinc-400 p-3  text-center hover:cursor-pointer">Latest News</Link>
+            <Link to="/featuredStories" className="border-b-2 hover:bg-zinc-400 p-3  text-center hover:cursor-pointer">Popular Articles</Link>
+            <Link to="/upcomingEvents" className="border-b-2 hover:bg-zinc-400 p-3  text-center hover:cursor-pointer">Upcoming Events</Link>
+            <Link to="/recentComments" className="border-b-2 hover:bg-zinc-400 p-3  text-center hover:cursor-pointer">Recent Comments</Link>
+            <Link to="/trendingTopics" className="border-b-2 hover:bg-zinc-400 p-3  text-center hover:cursor-pointer">Trending Topics</Link>
+            <Link to="/recommendedReads" className="border-b-2 hover:bg-zinc-400 p-3  text-center hover:cursor-pointer">Recommended Reads</Link>
+            <Link to="/featuredStories" className="border-b-2 hover:bg-zinc-400 p-3  text-center hover:cursor-pointer">Featured Stories</Link>
+            <Link to="/newsletterSignup" className="border-b-2 hover:bg-zinc-400 p-3  text-center hover:cursor-pointer">Newsletter Signup</Link>
+            <Link to="/socialMediaLinks" className="border-b-2 hover:bg-zinc-400 p-3  text-center hover:cursor-pointer">Social Media Links</Link>
+            <Link to="/aboutUs" className="border-b-2 hover:bg-zinc-400 p-3  text-center hover:cursor-pointer">About Us</Link>
+          </ul>
+        </aside>
+
       </div>
         <Footer />
     </BrowserRouter>
